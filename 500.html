@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR" data-page="500">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d5c3d">
+  <meta name="description" content="Erro no servidor — CatalogaBR">
+  <title>500 — Erro no servidor | CatalogaBR</title>
+  <link rel="icon" href="Logo.svg" type="image/svg+xml">
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem("catalogabr-theme")||((matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light")}catch(e){document.documentElement.dataset.theme="light"}</script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body class="error-page">
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="CatalogaBR — início"><img src="Logo.svg" alt="" width="42" height="42"><span>Cataloga<span>BR</span></span></a>
+    <div class="header-actions">
+      <button class="theme-toggle" type="button" aria-label="Ativar tema escuro" aria-pressed="false"><svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 15.4A8.5 8.5 0 0 1 8.6 3.6 8.5 8.5 0 1 0 20.4 15.4Z"/></svg><svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"/></svg></button>
+      <div class="language-switch" aria-label="Selecionar idioma"><button type="button" data-lang="pt" aria-pressed="true">PT</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div>
+    </div>
+  </header>
+  <main class="error-main">
+    <div class="error-code" aria-label="Erro 500"><span>5</span><img class="zero-logo" src="Logo.svg" alt="0"><span>0</span></div>
+    <div class="error-copy">
+      <p class="eyebrow"><span>500</span><span data-i18n="error500Eyebrow">Erro 500 · falha no servidor</span></p>
+      <h1 data-i18n="error500Title">Algo saiu do catálogo.</h1>
+      <p data-i18n="error500Body">Encontramos uma falha inesperada. Tente novamente em alguns instantes ou volte ao início.</p>
+      <a href="/" class="button button-primary"><span data-i18n="backHome">Voltar ao início</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a>
+    </div>
+  </main>
+</body>
+</html>

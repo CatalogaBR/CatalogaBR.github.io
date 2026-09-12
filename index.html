@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="pt-BR" data-page="home">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d5c3d">
+  <meta name="description" content="CatalogaBR — dados brasileiros, organizados para quem constrói.">
+  <title>CatalogaBR — dados do Brasil, prontos para construir</title>
+  <link rel="icon" href="Logo.svg" type="image/svg+xml">
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem("catalogabr-theme")||((matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light")}catch(e){document.documentElement.dataset.theme="light"}</script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="CatalogaBR — início">
+      <img src="Logo.svg" alt="" width="42" height="42">
+      <span>Cataloga<span>BR</span></span>
+    </a>
+    <div class="header-actions">
+      <span class="status-pill"><i></i><span data-i18n="status">Em desenvolvimento</span></span>
+      <button class="theme-toggle" type="button" aria-label="Ativar tema escuro" aria-pressed="false">
+        <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 15.4A8.5 8.5 0 0 1 8.6 3.6 8.5 8.5 0 1 0 20.4 15.4Z"/></svg>
+        <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"/></svg>
+      </button>
+      <div class="language-switch" aria-label="Selecionar idioma">
+        <button type="button" data-lang="pt" aria-pressed="true">PT</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span>API</span><span data-i18n="eyebrow">Feita no Brasil · para quem constrói</span></div>
+        <h1 data-i18n-html="heroTitle">Dados brasileiros.<br><em>Prontos para construir.</em></h1>
+        <p class="hero-lead" data-i18n="heroLead">Uma API simples para consultar e catalogar os dados que movem o Brasil — começando por CEPs e códigos de barras.</p>
+        <div class="hero-actions">
+          <a href="#explore" class="button button-primary">
+            <span data-i18n="discover">Conheça o projeto</span>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+          </a>
+          <span class="coming-note" data-i18n="comingNote">Documentação e acesso em breve</span>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="Prévia de uma resposta da API">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="api-card">
+          <div class="api-card-top">
+            <span class="window-dots"><i></i><i></i><i></i></span>
+            <span>api.catalogabr.dev</span>
+            <span class="method">GET</span>
+          </div>
+          <div class="request-line"><span>/cep/</span><strong>01001-000</strong></div>
+          <pre aria-hidden="true"><code>{
+  <b>"cep"</b>: <span>"01001-000"</span>,
+  <b>"logradouro"</b>: <span>"Praça da Sé"</span>,
+  <b>"cidade"</b>: <span>"São Paulo"</span>,
+  <b>"uf"</b>: <span>"SP"</span>,
+  <b>"país"</b>: <span>"Brasil"</span>
+}</code></pre>
+          <div class="scan-line"></div>
+        </div>
+        <div class="floating-tag tag-cep"><span>⌖</span> CEP</div>
+        <div class="floating-tag tag-barcode"><span class="mini-bars"></span><span data-i18n="barcode">Código de barras</span></div>
+      </div>
+    </section>
+
+    <section class="manifesto" id="explore">
+      <p class="section-kicker"><span>01</span><span data-i18n="purposeKicker">Nosso propósito</span></p>
+      <div class="manifesto-grid">
+        <h2 data-i18n-html="purposeTitle">Menos tempo procurando.<br><span>Mais tempo criando.</span></h2>
+        <div>
+          <p data-i18n="purposeBody">Dados públicos e comerciais ainda vivem espalhados, em formatos diferentes e difíceis de integrar. A CatalogaBR nasce para transformar essa complexidade em consultas claras, rápidas e consistentes.</p>
+          <p class="small-copy" data-i18n="purposeSmall">Uma base feita para produtos, automações e ideias que entendem o Brasil.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="data-section">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker"><span>02</span><span data-i18n="firstKicker">Os primeiros catálogos</span></p>
+          <h2 data-i18n="firstTitle">Começando pelo essencial.</h2>
+        </div>
+        <p data-i18n="firstIntro">Do endereço na entrega ao produto na prateleira: dados presentes em milhões de operações todos os dias.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card feature-cep">
+          <div class="feature-index">01</div>
+          <div class="feature-icon pin-icon" aria-hidden="true"><span></span></div>
+          <div>
+            <h3>CEP</h3>
+            <p data-i18n="cepText">Endereços brasileiros estruturados para cadastros, entregas e validações mais inteligentes.</p>
+            <div class="data-chips"><span>logradouro</span><span>cidade</span><span>UF</span></div>
+          </div>
+        </article>
+        <article class="feature-card feature-barcode">
+          <div class="feature-index">02</div>
+          <div class="feature-icon barcode-icon" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div>
+            <h3 data-i18n="barcode">Código de barras</h3>
+            <p data-i18n="barcodeText">Informações de produtos a partir de códigos GTIN/EAN, organizadas em uma consulta direta.</p>
+            <div class="data-chips"><span>GTIN / EAN</span><span data-i18n="product">produto</span><span data-i18n="brand">marca</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="soon-section">
+      <div class="soon-mark" aria-hidden="true"><img src="Logo.svg" alt=""></div>
+      <p class="section-kicker light"><span>03</span><span data-i18n="nextKicker">Próximo passo</span></p>
+      <h2 data-i18n-html="soonTitle">Estamos catalogando.<br><span>Em breve, você estará construindo.</span></h2>
+      <p data-i18n="soonBody">A API está em desenvolvimento. Estamos preparando os dados, a documentação e uma experiência que respeite o seu tempo.</p>
+      <div class="progress-wrap">
+        <div class="progress-label"><span data-i18n="progress">Preparando a primeira versão</span><strong>BETA</strong></div>
+        <div class="progress-track"><div></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="/">
+      <img src="Logo.svg" alt="" width="38" height="38">
+      <span>Cataloga<span>BR</span></span>
+    </a>
+    <p data-i18n="footer">Dados do Brasil, prontos para construir.</p>
+    <p>© <span id="year"></span> CatalogaBR</p>
+  </footer>
+</body>
+</html>
